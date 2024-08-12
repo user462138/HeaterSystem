@@ -33,13 +33,27 @@ namespace HeaterSystem.UnitTests
             // Configure the mock object to get the temperature between boundaries = 19.0
             temperatureSensorMock.Setup(x => x.GetTemperature()).Returns(19.0);
         }
-
         
         [TestMethod]
         public void WorkWhenTemperatureLessThanLowerBoundaryEnableHeatingElement()
         {
             // Configure the mock object to get the temperature less than lower boundary = 17.0
             temperatureSensorMock.Setup(x => x.GetTemperature()).Returns(17.0);
+        }
+
+        [TestMethod]
+        public void WorkWhenTemperatureEqualsLowerBoundaryDoNothing()
+        {
+            // --- Arrange ---
+            // Configure the mock object to get the temperature equal than lower boundary = 18.0
+            temperatureSensorMock.Setup(x => x.GetTemperature()).Returns(18.0);
+
+            // --- Act ---
+            thermostat.Work();
+
+            // Verify that neither the method Enable nor the method Disable of the heatingElementMock object is called (= Do Nothing)
+            heatingElementMock.Verify(x => x.Enable(), Times.Never);
+            heatingElementMock.Verify(x => x.Disable(), Times.Never);
         }
     }
 }
