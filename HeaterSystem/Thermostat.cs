@@ -45,5 +45,9 @@ public class Thermostat
         {
             heatingElement.Enable();
         }
+        else if (temperature == Setpoint - Offset)
+        {
+            // Do nothing
+        }
     }
 }
