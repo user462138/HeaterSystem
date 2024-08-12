@@ -1,10 +1,12 @@
-﻿namespace HeaterSystem
+﻿using HeaterSystem;
+
+ITemperatureSensor temperatureSensor = new TemperatureSensor();
+IHeatingElement heatingElement = new HeatingElement();
+
+Thermostat thermostat = new Thermostat(temperatureSensor, heatingElement);
+
+while (true)
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    thermostat.Work();
+    Thread.Sleep(5000);
 }
