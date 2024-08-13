@@ -59,5 +59,19 @@ public class Thermostat
         //{
         //  //Do Nothing
         //}
+        // temperature higher than upper boundary
+        else if (temperature > Setpoint + Offset)
+        {
+            heatingElement.Disable();
+        }
+        // temperature eqauls upper boundary 
+        else if (temperature == Setpoint + Offset)
+        {
+            // Do nothing
+        }
+        else
+        {
+            // Do nothing
+        }
     }
 }
