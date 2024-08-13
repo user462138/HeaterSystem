@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaterSystem", "HeaterSystem\HeaterSystem.csproj", "{230C1694-42BB-428E-A571-4559746A6239}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaterSystem", "HeaterSystem\HeaterSystem.csproj", "{230C1694-42BB-428E-A571-4559746A6239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaterSystem.UnitTests", "HeaterSystem.UnitTests\HeaterSystem.UnitTests.csproj", "{211532D0-6F5F-438D-9CCF-4B6FB56FD801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaterSystem.UnitTests", "HeaterSystem.UnitTests\HeaterSystem.UnitTests.csproj", "{211532D0-6F5F-438D-9CCF-4B6FB56FD801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS.IntegrationTests", "HS.IntegrationTests\HS.IntegrationTests.csproj", "{7F974CE6-DC76-4F28-A26F-637F20D73A0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{211532D0-6F5F-438D-9CCF-4B6FB56FD801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{211532D0-6F5F-438D-9CCF-4B6FB56FD801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{211532D0-6F5F-438D-9CCF-4B6FB56FD801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F974CE6-DC76-4F28-A26F-637F20D73A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F974CE6-DC76-4F28-A26F-637F20D73A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F974CE6-DC76-4F28-A26F-637F20D73A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F974CE6-DC76-4F28-A26F-637F20D73A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

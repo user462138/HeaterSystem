@@ -6,20 +6,23 @@ using System.Threading.Tasks;
 
 namespace HeaterSystem;
 
-public class HeatingElement : IHeatingElement
+public class HeatingElementStub : IHeatingElement
 {
+    private bool isEnabled = false;
+
+    // public bool IsEnabled => isEnabled;
     public bool IsEnabled
     {
-        get { throw new NotImplementedException(); }
+        get { return isEnabled; }
     }
 
     public void Disable()
     {
-        throw new NotImplementedException();
+        isEnabled = false;
     }
 
     public void Enable()
     {
-        throw new NotImplementedException();
+        isEnabled = true;
     }
 }
